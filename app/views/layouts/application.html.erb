@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MovieCatalog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+          <%= link_to "New Genre", new_genre_path %>
+          <%= link_to "New Director", new_director_path %>
+          <%= link_to "New Movie", new_movie_path %>
+        </li>
+      </ul>
+    </nav>
+    <% if flash.notice %>
+      <p><%= flash.notice %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

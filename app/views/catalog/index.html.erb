@@ -1,0 +1,18 @@
+<h1>movie catalog</h1>
+
+<p>future home page for the movie catalog</p>
+
+<p>genres:</p>
+<% @genres.each do | genre | %>
+  <%= link_to genre.name, genre %>
+<% end %>
+
+<p>directors:</p>
+<% @directors.each do | director | %>
+  <%= link_to director.name, director %>
+<% end %>
+
+<p>movies:</p>
+<% @movies.each do | movie | %>
+  <%= link_to movie.title, movie %>
+<% end %>

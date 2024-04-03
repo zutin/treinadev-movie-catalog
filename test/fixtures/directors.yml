@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  nationality: MyString
+  dob: 2024-04-03
+
+two:
+  name: MyString
+  nationality: MyString
+  dob: 2024-04-03

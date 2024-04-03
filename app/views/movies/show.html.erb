@@ -1,14 +1,11 @@
-<h1>movie info</h1>
+<h1>Movie information</h1>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %>
+<%= link_to 'Edit this movie', edit_movie_path(@movie) %>
 
-<p><%= @movie.title %></p>
-<p><%= @movie.release_date %></p>
-<p><%= @movie.synopsis %></p>
-<p><%= @movie.country %></p>
-<p><%= @movie.length %></p>
-<p><%= @movie.director.name %></p>
-<p><%= @movie.genre.name %></p>
-
-<h3>directed by</h3>
-<p><%= link_to @movie.director.name, director_path(@movie.director.id) %></p>
+<p><b>Title:</b> <%= @movie.title %></p>
+<p><b>Release date:</b> <%= @movie.release_date %></p>
+<p><b>Synopsis:</b> <%= @movie.synopsis %></p>
+<p><b>Country:</b> <%= @movie.country %></p>
+<p><b>Screen time:</b> <%= @movie.length %></p>
+<p><b>Genre:</b> <%= link_to @movie.genre.name, genre_path(@movie.genre.id) %></p>
+<p><b>Directed by:</b> <%= link_to @movie.director.name, director_path(@movie.director.id) %></p>

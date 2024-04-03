@@ -1,10 +1,10 @@
-<h1>genre info</h1>
+<h1>Genre information</h1>
 
-<%= link_to 'Edit', edit_genre_path %>
+<%= link_to 'Edit this genre', edit_genre_path %>
 
-<p> <%= @genre.name %> </p>
+<p><b>Genre name:</b> <%= @genre.name %> </p>
 
-<h3>movies in this genre</h3>
+<h3>Movies in the <%= @genre.name %> genre</h3>
 <ul>
   <% @genre.movies.each do | movie | %>
     <li> <%= link_to movie.title, movie_path(movie.id) %> </li>

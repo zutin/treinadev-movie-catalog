@@ -1,13 +1,13 @@
-<h1>director info</h1>
+<h1>Director information</h1>
 
-<%= link_to 'Edit', edit_director_path %>
+<%= link_to 'Edit this director', edit_director_path %>
 
-<p> <%= @director.name %> </p>
-<p> <%= @director.nationality %> </p>
-<p> <%= @director.dob %> </p>
-<p> <%= @director.genre.name %> </p>
+<p><b>Director name:</b> <%= @director.name %> </p>
+<p><b>Nationality:</b> <%= @director.nationality %> </p>
+<p><b>Date of birth:</b> <%= @director.dob %> </p>
+<p><b>Favourite genre:</b> <%= link_to @director.genre.name, genre_path(@director.genre.id) %> </p>
 
-<h3>movies directed by</h3>
+<h3>Movies directed by <%= @director.name %></h3>
 <ul>
   <% @director.movies.each do | movie | %>
     <li> <%= link_to movie.title, movie_path(movie.id) %> </li>

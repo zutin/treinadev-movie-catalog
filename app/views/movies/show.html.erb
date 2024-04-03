@@ -9,3 +9,6 @@
 <p><%= @movie.length %></p>
 <p><%= @movie.director.name %></p>
 <p><%= @movie.genre.name %></p>
+
+<h3>directed by</h3>
+<p><%= link_to @movie.director.name, director_path(@movie.director.id) %></p>

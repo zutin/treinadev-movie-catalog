@@ -6,3 +6,10 @@
 <p> <%= @director.nationality %> </p>
 <p> <%= @director.dob %> </p>
 <p> <%= @director.genre.name %> </p>
+
+<h3>movies directed by</h3>
+<ul>
+  <% @director.movies.each do | movie | %>
+    <li> <%= link_to movie.title, movie_path(movie.id) %> </li>
+  <% end %>
+</ul>
